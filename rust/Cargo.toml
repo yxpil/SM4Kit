@@ -1,0 +1,12 @@
+[package]
+name = "sm4kit"
+version = "1.0.0"
+edition = "2021"
+description = "SM4 分组密码（GB/T 32907-2016）：ECB/CBC + PKCS7，零依赖 Rust 实现"
+license = "MIT"
+repository = "https://github.com/yxpil/SM4Kit"
+keywords = ["sm4", "crypto", "cipher", "cbc"]
+
+[lib]
+name = "sm4kit"
+path = "src/lib.rs"

@@ -1,0 +1,13 @@
+# Rust
+rust/target/
+
+# Java
+java/*.class
+
+# Node
+node_modules/
+
+# 构建产物
+*.o
+*.exe
+sm4_test
