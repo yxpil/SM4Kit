@@ -187,7 +187,7 @@ function sm4_self_test(bool $longMode = false): bool {
     printf("KAT1 ecb: %s got=%s\n", $good ? 'PASS' : 'FAIL', $got);
     // 往返 + 边界
     foreach ([0, 1, 15, 16, 17, 100] as $n) {
-        $data = random_bytes($n);
+        $data = $n > 0 ? random_bytes($n) : ''; // PHP 的 random_bytes(0) 会抛 ValueError
         $k = random_bytes(16);
         $iv = random_bytes(16);
         $ok = $ok && sm4_ecb_decrypt($k, sm4_ecb_encrypt($k, $data)) === $data;
